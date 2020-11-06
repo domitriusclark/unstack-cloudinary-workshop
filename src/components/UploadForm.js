@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDropzone } from 'react-dropzone';
+import useUpload from '../hooks/useUpload';
 
 import {
   Text,
@@ -7,21 +8,27 @@ import {
   Input,
   Stack,
   Flex,
+  Image
 } from '@chakra-ui/core';
 
 export default function UploadForm() {
-  const { getRootProps, getInputProps } = useDropzone({ onDrop })
   const [fileToUpload, setFileToUpload] = React.useState({});
+
+  const { getRootProps, getInputProps } = useDropzone({ onDrop })
+
 
   function onDrop(acceptedFiles) {
     setFileToUpload(acceptedFiles[0]);
   }
 
   function onSubmit(file, options) {
+
     const reader = new FileReader();
     reader.addEventListener("load", () => {
       // Add your method of upload here
+
     })
+
     reader.readAsDataURL(file)
   }
 
@@ -32,13 +39,18 @@ export default function UploadForm() {
       justifyContent="center"
       direction="column"
       w={400}
-      height={300}
+      height={600}
     >
 
       <Text fontSize="xl">Upload to Cloudinary</Text>
 
       <Stack w="80%" spacing={2}>
-        <Input w="92%" size="sm" fontSize="sm" placeholder="Title" />
+        <Input
+          w="92%"
+          size="sm"
+          fontSize="sm"
+          placeholder="Title"
+        />
       </Stack>
       <Flex
         rounded="md"
@@ -62,6 +74,7 @@ export default function UploadForm() {
       >
         Upload Photo
       </Button>
+
     </Flex>
   );
 };

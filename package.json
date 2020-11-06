@@ -17,6 +17,7 @@
     "react-dom": "17.0.1",
     "react-dropzone": "^11.2.3",
     "react-icons": "^3.11.0",
+    "react-query": "^2.26.2",
     "use-cloudinary": "^3.1.7"
   }
 }
