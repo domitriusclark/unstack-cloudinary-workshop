@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.8",
+    "@chakra-ui/theme": "^1.0.0-rc.8",
     "cloudinary": "^1.23.0",
     "framer-motion": "^2.9.4",
     "next": "10.0.0",

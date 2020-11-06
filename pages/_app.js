@@ -1,5 +1,12 @@
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import { ChakraProvider } from '@chakra-ui/core';
+import defaultTheme from '@chakra-ui/theme';
 
-export default MyApp
+const App = ({ Component, pageProps }) => {
+  return (
+    <ChakraProvider resetCSS theme={defaultTheme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
+};
+
+export default App;

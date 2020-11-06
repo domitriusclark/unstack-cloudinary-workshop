@@ -57,7 +57,6 @@ export default function UploadForm() {
 
       <Button
         size="lg"
-        variantColor="teal"
         variant="outline"
         mt={4}
       >
